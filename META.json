@@ -56,11 +56,11 @@
    "provides" : {
       "DSP::LinPred" : {
          "file" : "lib/DSP/LinPred.pm",
-         "version" : "0.01"
+         "version" : "0.02"
       }
    },
    "release_status" : "stable",
-   "version" : "0.01",
+   "version" : "0.02",
    "x_contributors" : [
       "yokoda <yokoda@ub12.04svr>",
       "Toshiaki_Yokoda <adokoy001@gmail.com>"
