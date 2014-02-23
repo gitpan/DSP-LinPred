@@ -4,7 +4,7 @@ DSP::LinPred - Linear Prediction
 
 # SYNOPSIS
 
-    use LinPred;
+    use DSP::LinPred;
 
     # OPTIONS
     # mu       : Step size of filter. (default = 0.001)
@@ -22,7 +22,10 @@ DSP::LinPred - Linear Prediction
     #               (default = 1 enable)
     # stddev_init : Initial value of stddev.
     #               (default = 1)
+
     my $lp = DSP::LinPred->new;
+
+    # set filter
     $lp->set_filter({
                      mu => 0.001,
                      filter_length => 500,

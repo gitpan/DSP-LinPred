@@ -1,7 +1,7 @@
 package DSP::LinPred;
 use 5.008005;
 use Mouse;
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 has 'mu' => (
     is => 'rw',
@@ -245,7 +245,7 @@ DSP::LinPred - Linear Prediction
 
 =head1 SYNOPSIS
 
-    use LinPred;
+    use DSP::LinPred;
 
     # OPTIONS
     # mu       : Step size of filter. (default = 0.001)
@@ -263,7 +263,10 @@ DSP::LinPred - Linear Prediction
     #               (default = 1 enable)
     # stddev_init : Initial value of stddev.
     #               (default = 1)
+
     my $lp = DSP::LinPred->new;
+
+    # set filter
     $lp->set_filter({
                      mu => 0.001,
                      filter_length => 500,
