@@ -12,7 +12,6 @@ DSP::LinPred - Linear Prediction
     # h_length : Filter size. (default = 100)
     # dc_mode  : Direct Current Component estimation.
     #            it challenges to estimating DC component when set 1.
-    #            automatically by IIR filter in updating phase.
     #            (default = 1 enable)
     # dc_init  : Initial DC bias.
     #            It *SHOULD* be set value *ACCURATELY* when dc_mode => 0.
@@ -22,6 +21,7 @@ DSP::LinPred - Linear Prediction
     #               (default = 1 enable)
     # stddev_init : Initial value of stddev.
     #               (default = 1)
+    #
 
     my $lp = DSP::LinPred->new;
 
