@@ -132,6 +132,28 @@ This method can calculate standard deviation of current filter.
     my $stddev = $lp->dc;
     print 'Current STDDEV : '.$stddev, "\n";
 
+# EXPERIMENTAL OPTIONS
+
+## _iir\_mode_ and _iir\_a_
+
+In _set\_filter_ option.
+if set iir\_mode to 1, and iir\_a, it challenges to calculate DC value and stddev by using IIR filter.
+
+IIR spec: 
+next\_dc = (current\_input - iir\_a \* current\_dc) / (1 - iir\_a)
+
+next\_stddev = (abs(current\_input - current\_dc) - iir\_a \* current\_stddev) / (1 - iir\_a)
+
+    # set_filter with iir_mode on.
+    $lp->set_filter({
+                     mu => 0.001,
+                     filter_length => 500,
+                     dc_mode => 1,
+                     stddev_mode => 1,
+                     iir_mode => 1,
+                     iir_a => 0.01
+                    });
+
 # LICENSE
 
 Copyright (C) Toshiaki Yokoda.
